@@ -1,6 +1,10 @@
 var actors = angular.module('actors', []);
 actors.controller("gallery", gallery);
-function gallery($scope) {
+function gallery($scope,$http) {
+	$http.get("data/employees.json")
+	.success(function(response){
+		
+	});
 	$scope.actors = [{
 		name : 'Millie Bobby Brown',
 		link : 'http://www.imdb.com/name/nm5611121/',
@@ -101,6 +105,10 @@ function gallery($scope) {
 		name:'Tom Hanks',
 		link:'http://www.imdb.com/name/nm0000158/?ref_=nv_sr_3',
 		img:'img/Tom Hanks.jpg',
+	},{
+		name:'Adel Imam',
+		link:'http://www.imdb.com/name/nm0408054/?ref_=nv_sr_1',
+		img:'img/Adel Imam.jpg',
 	},
 	];
 	$scope.sort = function(dir){
