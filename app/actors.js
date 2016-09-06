@@ -3,6 +3,7 @@ actors.controller("gallery", gallery);
 function gallery($scope,$http) {
 	$http.get("data/employees.json")
 	.success(function(response){
+		$scope.employees=response.employees;
 		
 	});
 	$scope.actors = [{

@@ -12,6 +12,19 @@
 .actorBox img:hover {
 	border:3px solid red;
 }
+
+button {
+    background-color: #555555; 
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius:3px;
+}
 body{
 	background-color:#CCCCCC;
 }

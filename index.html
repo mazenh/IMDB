@@ -9,6 +9,7 @@
 	</head>
 	<body>
 	<div ng-controller="gallery">
+		<div ng-repeat="e in employees">{{e.firstName}}</div>
 		search:
     <input ng-model="query" />
    <button ng-click ="sort('up')">Up</button> | <button ng-click ="sort('down')">Down</button> 
