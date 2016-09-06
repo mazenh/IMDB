@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app='actors'>
+	<head>
+		<meta charset="UTF-8" />
+		<title>ACTORS</title>
+		<link href="css/style.css" rel="stylesheet" />
+		<script src="js/angular (1).js"></script>
+		<script src="app/actors.js"></script>
+	</head>
+	<body>
+	<div ng-controller="gallery">
+		search:
+    <input ng-model="query" />
+   <button ng-click ="sort('up')">Up</button> | <button ng-click ="sort('down')">Down</button> 
+	<hr />
+	<div ng-repeat="actor in actors | filter:{name:query}| orderBy:upDown" class="actorBox">
+		<img src="{{actor.img}}" width="200" height="250"/>
+		<a href="{{actor.link}}" target="_blank">{{actor.name}}</a>
+		<hr />
+	</div>
+	</div>	
+	</body>
+</html>
